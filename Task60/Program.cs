@@ -19,6 +19,7 @@ void GenerateXYZArray()
     Z = int.Parse(Console.ReadLine());
     int[,,] Array = new int[X, Y, Z];
     int[] UsedNumbers = new int[Array.Length];
+    
     Random Rand = new Random();
     for (int x = 0; x < X; x++)
     {

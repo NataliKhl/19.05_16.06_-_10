@@ -46,13 +46,17 @@ void GenerateBothMatrix()
     int SecondMatrixColumns = 0;
     Console.WriteLine("Введите количество строк второй матрицы, и столбцов первой матрицы ");
     FirstMatrixColumns = int.Parse(Console.ReadLine());
+
     SecondMatrixRows = FirstMatrixColumns;
+
     Console.Write("Введите количество столбцов второй матрицы:  ");
     SecondMatrixColumns = int.Parse(Console.ReadLine());
     Console.Write("Введите количество строк первой матрицы:");
     FirstMatrixRows = int.Parse(Console.ReadLine());
+
     int[,] FirstMatrix = new int[FirstMatrixRows, FirstMatrixColumns];
     int[,] SecondMatrix = new int[SecondMatrixRows, SecondMatrixColumns];
+
     Random Rand = new Random();
     for (int i = 0; i < FirstMatrixRows; i++)
     {
@@ -68,6 +72,7 @@ void GenerateBothMatrix()
             SecondMatrix[i, j] = Rand.Next(1, 100);
         }
     }
+    
     int[,] ResultMatrix = MatrixMultiplication(FirstMatrix, SecondMatrix);
     ShowArrayOnScreen(ResultMatrix);
 }
